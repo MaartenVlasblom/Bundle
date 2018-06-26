@@ -147,7 +147,7 @@
 		var hr = new XMLHttpRequest();
     	var id = getParameterByName("id");
 
-    	hr.open("GET", "/bundlePWABackend/restservices/transaction/loanid/" + id, true);
+    	hr.open("GET", "/restservices/transaction/loanid/" + id, true);
 
     	hr.onreadystatechange = function() {
     		if (hr.readyState == 4 && hr.status == 200) {
@@ -186,12 +186,12 @@
 		var hr = new XMLHttpRequest();
     	var id = getParameterByName("id");
 
-    	hr.open("GET", "/bundlePWABackend/restservices/loan/" + id, true);
+    	hr.open("GET", "/restservices/loan/" + id, true);
 
     	hr.onreadystatechange = function() {
     		if (hr.readyState == 4 && hr.status == 200) {
     			var loanData = JSON.parse(hr.responseText);
-					var location = "/bundlePWABackend/pdf/"+loanData.contractpdf;
+					var location = "/pdf/"+loanData.contractpdf;
 
     			$('#loanstatus').text(UCFirst(checkValue(loanData.status)));
     			$('#edit').attr("onclick", "window.location.href='edit_loan.jsp?id="+ id +"'");
@@ -225,7 +225,7 @@
 	function getUser(id) {
     	var hr = new XMLHttpRequest();
 
-    	hr.open("GET", "/bundlePWABackend/restservices/user/" + id, true);
+    	hr.open("GET", "/restservices/user/" + id, true);
 
     	hr.onreadystatechange = function() {
     		if (hr.readyState == 4 && hr.status == 200) {
