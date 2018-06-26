@@ -413,7 +413,7 @@
 
 				if(checkValues()) {
 				$.ajax({
-					url : "/bundlePWABackend/restservices/address",
+					url : "/restservices/address",
 					type : "post",
 					data : $("#address").serialize(),
 
@@ -449,7 +449,7 @@
 					});
 
 					$.ajax({
-						url : "/bundlePWABackend/restservices/user",
+						url : "/restservices/user",
 						type : "post",
 						data : formData,
 
@@ -483,7 +483,7 @@
 					});
 
 					$.ajax({
-						url : "/bundlePWABackend/restservices/loan",
+						url : "/restservices/loan",
 						type : "post",
 						data : formData,
 
@@ -506,7 +506,7 @@
 						value : userid
 					});
 					$.ajax({
-						url : "/bundlePWABackend/restservices/pdf",
+						url : "/restservices/pdf",
 						type : "post",
 						data : pdfData,
 
