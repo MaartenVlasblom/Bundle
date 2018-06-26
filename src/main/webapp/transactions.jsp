@@ -96,7 +96,7 @@
 		var sessionToken = window.sessionStorage.getItem("sessionToken");
 		
 		$.ajax({
-			url: "/bundlePWABackend/restservices/transaction",
+			url: "/restservices/transaction",
 			type: "get",
 			beforeSend: function(xhr) {
 				xhr.setRequestHeader("Authorization",  "Bearer " + sessionToken);
