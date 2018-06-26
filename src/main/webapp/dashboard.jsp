@@ -103,7 +103,7 @@
 		$
 				.ajax({
 
-					url : "/bundlePWABackend/restservices/address/loanspercountry",
+					url : "/restservices/address/loanspercountry",
 					type : "get",
 					beforeSend : function(xhr) {
 						xhr.setRequestHeader("Authorization", "Bearer "
@@ -162,7 +162,7 @@
 		$
 				.ajax({
 
-					url : "/bundlePWABackend/restservices/loan/lastweek",
+					url : "/restservices/loan/lastweek",
 					type : "get",
 					beforeSend : function(xhr) {
 						xhr.setRequestHeader("Authorization", "Bearer "
@@ -290,7 +290,7 @@
 		$
 				.ajax({
 
-					url : "/bundlePWABackend/restservices/transaction/lastweek",
+					url : "/restservices/transaction/lastweek",
 					type : "get",
 					beforeSend : function(xhr) {
 						xhr.setRequestHeader("Authorization", "Bearer "
