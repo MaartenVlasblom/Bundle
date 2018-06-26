@@ -135,7 +135,7 @@
 			} else {
 				id = getParameterByName("id");
 				hr.open("GET",
-						"/bundlePWABackend/restservices/loangroup/" + id, true);
+						"/restservices/loangroup/" + id, true);
 
 				hr.onreadystatechange = function() {
 					if (hr.readyState == 4 && hr.status == 200) {
@@ -181,7 +181,7 @@
 				var hr = new XMLHttpRequest();
 
 				hr.open("GET",
-						"/bundlePWABackend/restservices/loangroup/" + id, true);
+						"/restservices/loangroup/" + id, true);
 
 				hr.onreadystatechange = function() {
 					if (hr.readyState == 4 && hr.status == 200) {
@@ -224,7 +224,7 @@
 
 			$
 					.ajax({
-						url : "/bundlePWABackend/restservices/user/" + id,
+						url : "/restservices/user/" + id,
 						type : "get",
 
 						success : function(response) {
@@ -278,7 +278,7 @@
 			dropdown.prop('selectedIndex', 0);
 
 			// Populate dropdown with list of provinces
-			$.getJSON('/bundlePWABackend/restservices/loan/groupless',
+			$.getJSON('/restservices/loan/groupless',
 					function(data) {
 						$.each(data, function(key, entry) {
 							dropdown.append($('<option></option>').attr(
@@ -291,7 +291,7 @@
 			id = getParameterByName("id");
 			loanid = document.getElementById("users-dropdown").value;
 			$.ajax({
-				url : "/bundlePWABackend/restservices/loangroup/" + id + "/"
+				url : "/restservices/loangroup/" + id + "/"
 						+ loanid,
 				type : "post",
 				data : pdfData,
@@ -318,7 +318,7 @@
 			var hr = new XMLHttpRequest();
 
 			id = getCookie("userid");
-			hr.open("GET", "/bundlePWABackend/restservices/user/getgroupid/"
+			hr.open("GET", "/restservices/user/getgroupid/"
 					+ id, true);
 
 			hr.onreadystatechange = function() {
@@ -336,7 +336,7 @@
 		function deleteGroup(){
 						id = getParameterByName("id");
 						$.ajax({
-							url : "/bundlePWABackend/restservices/group/" + id ,
+							url : "/restservices/group/" + id ,
 							type : "DELETE",
 
 
