@@ -70,7 +70,7 @@
         //retrieve data to fill form
         $(document).ready(function() {
             $.ajax({
-                url : "/bundlePWABackend/restservices/loan/"
+                url : "/restservices/loan/"
                 + getParameterByName('id'),
                 type : "get",
 
@@ -93,7 +93,7 @@
             //post data when form is submitted
             $("form").submit(function() {
             $.ajax({
-					url : "/bundlePWABackend/restservices/loan/" + getParameterByName('id'),
+					url : "/restservices/loan/" + getParameterByName('id'),
 					type : "put",
 					data : $("form").serialize(),
 
