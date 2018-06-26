@@ -101,9 +101,9 @@
 		var getURL;
 		if (role == 'officer') {			
 			var officerid = getCookie('userid');
-			getURL = "/bundlePWABackend/restservices/loan/officer/" + officerid;
+			getURL = "/restservices/loan/officer/" + officerid;
 			} else if (role == 'admin') {
-			getURL = "/bundlePWABackend/restservices/loan";
+			getURL = "/restservices/loan";
 			}
 		
 		$.ajax({
