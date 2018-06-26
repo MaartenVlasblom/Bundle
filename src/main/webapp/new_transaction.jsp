@@ -75,7 +75,7 @@
 
 
                     $.ajax({
-                        url: "/bundlePWABackend/restservices/transaction",
+                        url: "/restservices/transaction",
                         type: "post",
                         data: formData,
 
